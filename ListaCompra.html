@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista Compra</title>
+</head>
+<script>
+    let total = 0;
+    function aniadirElementoLista(){
+       const lista = document.getElementById("lista");
+       let nombreProducto = document.getElementById("nombreProducto").value;
+       let precioProducto = parseFloat(document.getElementById("precioProducto").value);
+
+       
+      
+        const nuevoElemento = document.createElement("li");
+        nuevoElemento.innerHTML = (nombreProducto + " - " + precioProducto + "€");
+        
+        
+        lista.appendChild(nuevoElemento);
+
+        let cantidadProductos = lista.childElementCount;
+
+        total+=precioProducto;
+        document.getElementById("total").innerHTML="Total de productos: "+ cantidadProductos + " y el precio del producto " + total+"€";
+
+    }
+</script>
+<body>
+    <!-- Crea una pagina que permita añadir elementos (nombre y precio)
+    a una lista de la compra y muestre el importe total de la compra -->
+    <h1>Lista de la compra</h1>
+    <label for="nombreProducto">Nombre del producto</label>
+    <input id="nombreProducto"  type="text"><br>
+
+    <label for="precioProducto"> Precio del producto</label>
+    <input id="precioProducto"  type="number"><br>
+
+    <button onclick="aniadirElementoLista()">Añadir producto</button>
+
+    <ol id="lista">
+
+    </ol>
+   <h2 id="total"></h2>
+</body>
+</html>

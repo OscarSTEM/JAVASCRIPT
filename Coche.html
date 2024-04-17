@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Coche Nissan</title>
+</head>
+<style>
+
+img{
+    width: 500px;
+    height: 300px;
+}
+</style>
+<body>
+    <div class="fichaCoche">
+    <h2 id="tipoModeloCoche"></h2>
+    <img id="nissan" src="" alt="">
+    <ul id="caracteristicasCoche">
+    </ul>
+    </div>
+</body>
+<script>
+      function aniadirElementoLista(texto,lista){
+        const nuevoElemento = document.createElement("li");
+        nuevoElemento.innerHTML = texto;
+    
+        listaCaracteristicasCoche.appendChild(nuevoElemento);
+    }
+
+    const car = {type: "Nissan Skyline GTR R34",
+                model:"1998",
+                color:"blue",
+                potencia:200,
+                img: "https://cdn.autobild.es/sites/navi.axelspringer.es/public/media/image/2022/06/video-estos-coches-no-son-legales-ni-eeuu-1284683.jpg?tf=1200x",
+                HP: 276,
+                 motor:{
+        HP: 200, gasoline: true
+        },
+    }
+    document.getElementById("nissan").src = car.img;
+    document.getElementById("tipoModeloCoche").innerHTML = car.type+" "+car.model;
+
+
+    const listaCaracteristicasCoche = document.getElementById("caracteristicasCoche");
+
+    
+        
+    aniadirElementoLista("Color: " + car.color, listaCaracteristicasCoche);
+    aniadirElementoLista("Potencia: " + car.potencia, listaCaracteristicasCoche);
+    
+
+   
+
+  
+</script>
+</html>

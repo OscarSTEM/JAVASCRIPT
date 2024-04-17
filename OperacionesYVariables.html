@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    
+    <title>Operaciones y variables</title>
+</head>
+<script>
+   
+    function read(idElemento){
+        return document.getElementById(idElemento).value;
+    }
+    
+    function sumar(){
+        numero1 = parseInt(read("numero1"));
+        numero2 = parseInt(read("numero2"));
+        let resultado = numero1 + numero2;
+        document.getElementById("resultado").innerHTML = "El resultado de sumar " + numero1 + " y " + numero2 + " es " + resultado;
+    }
+    function restar(){
+        numero1 = parseInt(read("numero1"));
+        numero2 = parseInt(read("numero2"));
+        let resultado = numero1 - numero2;
+        document.getElementById("resultado").innerHTML = "El resultado de restar " + numero1 + " y " + numero2 + " es " + resultado;
+    }
+    function dividir(){
+        numero1 = parseInt(read("numero1"));
+        numero2 = parseInt(read("numero2"));
+        let resultado = numero1 / numero2;
+        document.getElementById("resultado").innerHTML = "El resultado de dividir " + numero1 + " y " + numero2 + " es " + resultado;
+    }
+    function multiplicar(){
+        numero1 = parseInt(read("numero1"));
+        numero2 = parseInt(read("numero2"));
+        let resultado = numero1 * numero2;
+        document.getElementById("resultado").innerHTML = "El resultado de multiplicar " + numero1 + " y " + numero2 + " es " + resultado;
+    }
+    //let es para declarar una variable
+    // let numero1 = 5;
+    // let numero2 = 10; 
+    // let resultado = numero1 + numero2
+    //Console es para imprimir por consola
+    // console.log( "El resultado de sumar " + numero1 + " y " + numero2 + " es " + resultado); 
+
+    // //Otra forma de imprimir por pantalla pero en forma de alerta
+    // // window.alert( "El resultado de sumar " + numero1 + " y " + numero2 + " es " + resultado);
+
+    // document.getElementById("lol").innerHTML = "El resultado de sumar " + numero1 + " y " + numero2 + " es " + resultado;
+
+
+</script>
+
+<body>
+    <label for="numero1">Numero 1:</label>
+    <input id="numero1" type="number"><br>
+
+    <label for="numero2"> Numero 2:</label>
+    <input id="numero2" type="number"><br>
+    
+    <button onclick="sumar()">SUMAR</button>
+    <button onclick="restar()">RESTAR</button>
+    <button onclick="dividir()">DIVIDIR</button>
+    <button onclick="multiplicar()">MULTIPLICAR</button>
+    <p id="resultado"></p>
+</body>
+
+</html>

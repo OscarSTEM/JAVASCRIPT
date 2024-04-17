@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+     function read(idElemento){
+        return document.getElementById(idElemento).innerHTML;
+    }
+    function buscar(){
+        let buscado = read("buscado");
+        console.log(buscado)
+        let texto = document.getElementById("texto").innerHTML;
+
+        window.alert(texto.includes(buscado));
+    }
+</script>
+<body>
+    <p id="texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos nemo ducimus non excepturi molestias debitis laboriosam quisquam earum ipsum deleniti animi exercitationem ipsam nobis repudiandae, voluptates quas vel quam voluptatem.</p>
+    
+
+    <input id="buscado" type="text">
+    <button onclick="buscar()">Buscar</button>
+</body>
+</html>

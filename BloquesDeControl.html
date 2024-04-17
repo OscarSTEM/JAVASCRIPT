@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Bloques De Control</title>
+</head>
+<script>
+    // Estas 2 funciones se van a usar mucho
+    function read(idElemento){
+        return document.getElementById(idElemento).value;
+    }
+    function readInt(idElemento){
+        return parseInt(document.getElementById(idElemento).value);
+    }
+    function anios(){
+        let edad = (readInt("edad"));
+        if(edad < 18){
+            document.getElementById("anios").innerHTML = "Eres menor de edad";
+           
+        }else{
+            document.getElementById("anios").innerHTML = "Eres mayor de edad";
+        }
+    }
+    // Otra forma de hacerlo
+    // 
+    // function anios(){
+    //    let edad = parseInt(document.getElementById("edad").value);
+    //    let resultado;
+    //     if(edad < 18){
+    //         resultado =  "Eres menor de edad";
+    //          window.location.replace("http://www.google.com") no puedes volver para atras
+    //           window.location.href = ("http://www.google.com") puedes volver atras
+    //     }else{
+    //         resultado = "Eres mayor de edad";
+    //     }
+    //      document.getElementById("resultado").innerHTML = resultado;
+    // }
+    
+</script>
+<body>
+    <label for="edad">Introduce tu edad:</label>
+    <input id="edad" type="number"><br>
+
+    <button onclick="anios()">Validar</button>
+    <p id="anios"></p>
+</body>
+</html>

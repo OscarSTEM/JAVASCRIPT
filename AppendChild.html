@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Aniadir elementos</title>
+</head>
+<script>
+    // let variables simples
+    // const declarar elementos u objetos (datos complejos)
+
+    function aniadirElementoLista(){
+       const lista = document.getElementById("lista");
+
+        let cantidadElementosLista = lista.childElementCount;
+      
+        const nuevoElemento = document.createElement("li");
+        nuevoElemento.innerHTML = "El " + (cantidadElementosLista + 1);
+        
+        
+        lista.appendChild(nuevoElemento);
+
+    }
+
+    function borrarUltimoElementoLista(){
+        const lista = document.getElementById("lista");
+        lista.lastElementChild.remove();
+       
+    }
+    function reemplazarUltimoElementoLista(){
+        const lista = document.getElementById("lista");
+        
+        const nuevoElemento = document.createElement("li");
+        nuevoElemento.innerHTML = "Elemento editado";
+
+        lista.replaceChild(nuevoElemento, lista.lastElementChild);
+    }
+    replaceChild
+</script>
+
+
+
+<body>
+    <h1>Añadir elementos</h1>
+    <ul id="lista">
+        <li>El 1</li>
+        <li>El 2</li>
+        <li>El 3</li>
+       
+    </ul>
+    <button onclick="aniadirElementoLista()">Añadir elemento</button>
+    <button onclick = "borrarUltimoElementoLista()">Borrar</button>
+    <button onclick="reemplazarUltimoElementoLista()">Reemplaza</button>
+</body>
+</html>
